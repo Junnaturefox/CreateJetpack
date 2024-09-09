@@ -8,8 +8,11 @@ import com.possible_triangle.create_jetpack.item.JetpackItem
 import com.simibubi.create.AllCreativeModeTabs
 import com.simibubi.create.AllTags.AllItemTags
 import com.simibubi.create.Create
-import com.simibubi.create.content.equipment.armor.*
+import com.simibubi.create.content.equipment.armor.AllArmorMaterials
+import com.simibubi.create.content.equipment.armor.BacktankBlockEntity
+import com.simibubi.create.content.equipment.armor.BacktankInstance
 import com.simibubi.create.content.equipment.armor.BacktankItem.BacktankBlockItem
+import com.simibubi.create.content.equipment.armor.BacktankRenderer
 import com.simibubi.create.content.kinetics.BlockStressDefaults
 import com.simibubi.create.foundation.data.CreateRegistrate
 import com.simibubi.create.foundation.data.SharedProperties
@@ -80,7 +83,7 @@ object Content {
         .register()
 
     val JETPACK_BLOCK: BlockEntry<JetpackBlock> = REGISTRATE
-        .block<JetpackBlock>("jetpack") { JetpackBlock({ JETPACK_ITEM.get() }, it) }
+        .block<JetpackBlock>("jetpack") { JetpackBlock(it) }
         .initialProperties { SharedProperties.copperMetal() }
         .jetpackTransforms { JETPACK_ITEM.get() }
         .register()
@@ -98,7 +101,7 @@ object Content {
         .register()
 
     val NETHERITE_JETPACK_BLOCK: BlockEntry<JetpackBlock> = REGISTRATE
-        .block<JetpackBlock>("netherite_jetpack") { JetpackBlock({ NETHERITE_JETPACK_ITEM.get() }, it) }
+        .block<JetpackBlock>("netherite_jetpack") { JetpackBlock(it) }
         .initialProperties { SharedProperties.netheriteMetal() }
         .jetpackTransforms { NETHERITE_JETPACK_ITEM.get() }
         .register()
