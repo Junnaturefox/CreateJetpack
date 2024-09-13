@@ -24,5 +24,6 @@
   "item.create_jetpack.netherite_jetpack.tooltip.control3": "]\u2141[ ss\u01DD\u0279\u0500",
   "item.create_jetpack.netherite_jetpack.tooltip.control4": "]H[ ss\u01DD\u0279\u0500",
   "item.create_jetpack.netherite_jetpack.tooltip.summary": "\u0279\u0131\u0250 p\u01DDz\u0131\u0279nss\u01DD\u0279d bu\u0131sn uo\u0131\u0287\u0250\u0287\u0131\u028C\u01DD\u05DF s\u028Do\u05DF\u05DF\u2C6F",
-  "item.create_jetpack.netherite_jetpack_placeable": "\u01DD\u05DFq\u0250\u01DD\u0254\u0250\u05DF\u0500 \u029E\u0254\u0250d\u0287\u01DD\u017F \u01DD\u0287\u0131\u0279\u01DD\u0265\u0287\u01DDN"
+  "item.create_jetpack.netherite_jetpack_placeable": "\u01DD\u05DFq\u0250\u01DD\u0254\u0250\u05DF\u0500 \u029E\u0254\u0250d\u0287\u01DD\u017F \u01DD\u0287\u0131\u0279\u01DD\u0265\u0287\u01DDN",
+  "key.categories.movement.jetpack": "\u029E\u0254\u0250d\u0287\u01DD\u017F \u01DD\u0287\u0250\u01DD\u0279\u0186"
 }

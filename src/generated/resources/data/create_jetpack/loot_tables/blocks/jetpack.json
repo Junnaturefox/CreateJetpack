@@ -9,10 +9,6 @@
           "type": "minecraft:item",
           "functions": [
             {
-              "function": "minecraft:copy_name",
-              "source": "block_entity"
-            },
-            {
               "function": "minecraft:copy_nbt",
               "source": "block_entity",
               "ops": [
@@ -28,9 +24,9 @@
               "source": "block_entity",
               "ops": [
                 {
-                  "source": "Enchantments",
-                  "target": "Enchantments",
-                  "op": "replace"
+                  "source": "VanillaTag",
+                  "target": "{}",
+                  "op": "merge"
                 }
               ]
             }
