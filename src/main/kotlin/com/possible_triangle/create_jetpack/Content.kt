@@ -40,7 +40,6 @@ import net.minecraft.world.level.block.Block
 import net.minecraft.world.level.storage.loot.LootPool
 import net.minecraft.world.level.storage.loot.LootTable
 import net.minecraft.world.level.storage.loot.entries.LootItem
-import net.minecraft.world.level.storage.loot.functions.CopyNameFunction
 import net.minecraft.world.level.storage.loot.functions.CopyNbtFunction
 import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition
 import net.minecraft.world.level.storage.loot.providers.nbt.ContextNbtProvider
@@ -124,14 +123,13 @@ object Content {
                         .setRolls(ConstantValue.exactly(1F))
                         .add(
                             LootItem.lootTableItem(getItem())
-                                .apply(CopyNameFunction.copyName(CopyNameFunction.NameSource.BLOCK_ENTITY))
                                 .apply(
                                     CopyNbtFunction.copyData(ContextNbtProvider.BLOCK_ENTITY)
                                         .copy("Air", "Air")
                                 )
                                 .apply(
                                     CopyNbtFunction.copyData(ContextNbtProvider.BLOCK_ENTITY)
-                                        .copy("Enchantments", "Enchantments")
+                                        .copy("VanillaTag", "{}", CopyNbtFunction.MergeStrategy.MERGE)
                                 )
                         )
                 )
@@ -180,6 +178,8 @@ object Content {
 
     fun register(modBus: IEventBus) {
         REGISTRATE.registerEventListeners(modBus)
+
+        REGISTRATE.addRawLang("key.categories.movement.jetpack", "Create Jetpack")
 
         LOADING_CONTEXT.registerConfig(ModConfig.Type.COMMON, Configs.SERVER_SPEC)
         LOADING_CONTEXT.registerConfig(ModConfig.Type.CLIENT, Configs.CLIENT_SPEC)
